@@ -1,0 +1,8 @@
+{
+  "name": "CognitoSpark Vision",
+  "description": "Revolutionary AI Content Engine for E-commerce. Transform product photos into high-performing marketing assets, UGC influencer shoots, and cinematic ads.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

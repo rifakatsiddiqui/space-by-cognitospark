@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CognitoSpark Vision | AI Production Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#2563eb',
+                600: '#1d4ed8',
+                700: '#1e40af',
+                900: '#1e3a8a',
+              },
+              studio: {
+                gold: '#D4AF37',
+                slate: '#0f172a',
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s infinite linear',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+      
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #f8fafc; }
+      ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .premium-shadow {
+        box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.05);
+      }
+      
+      .gradient-border {
+        position: relative;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 1px;
+      }
+      .gradient-border::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 1.5rem;
+        padding: 2px; 
+        background: linear-gradient(45deg, #2563eb, #7c3aed, #db2777);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "jszip": "https://esm.sh/jszip@^3.10.1",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+    "express": "https://esm.sh/express@^5.2.1",
+    "crypto": "https://esm.sh/crypto@^1.0.1",
+    "cors": "https://esm.sh/cors@^2.8.5",
+    "dotenv": "https://esm.sh/dotenv@^17.2.3",
+    "firebase-admin": "https://esm.sh/firebase-admin@^13.6.0",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#FAFAFA] text-slate-900 antialiased min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>
